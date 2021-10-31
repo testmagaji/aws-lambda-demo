@@ -22,5 +22,7 @@ ENV AWS_ACCESS_KEY_ID $AWS_ACCESS_KEY_ID
 ENV AWS_SECRET_ACCESS_KEY $AWS_SECRET_ACCESS_KEY
 ENV AWS_DEFAULT_REGION $AWS_DEFAULT_REGION
 
+ENV PATH="${LAMBDA_TASK_ROOT}:${PATH}"
+
 # Set the CMD to your handler (could also be done as a parameter override outside of the Dockerfile)
 CMD [ "app.handler" ]
