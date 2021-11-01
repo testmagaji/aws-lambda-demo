@@ -41,32 +41,10 @@ def __send_email(msg: str) -> None:
 
 def handler(event, context):
     return {
-#         'event': str(type(event),
-#         'context': str(type(context)),
-#         'dir': [dir(event), dir(context)],
+        'event': str(type(event)),
+        'context': str(type(context)),
+        'dir': [dir(event), dir(context)],
         'message': 'hello world'
     }
-#     response = requests.get(url.format(
-#         lat=lat,
-#         lon=lon,
-#         exclude=exclude,
-#         API_key=os.getenv('WEATHER_API_KEY')
-#     ))
-
-#     data = response.json()
-
-#     rain_conditions = ['rain', 'thunderstorm', 'drizzle']
-#     snow_conditions = ['snow']
-
-#     today_weather = data['daily'][0]['weather'][0]['main'].lower()
-
-#     if today_weather in rain_conditions:
-#         msg = 'Pack an umbrella!'
-#     elif today_weather in snow_conditions:
-#         msg = 'Pack your snow boots!'
-#     else:
-#         msg = 'Clear skies today!'
-
-#     __send_email(msg)
 
 handler(None, None)
