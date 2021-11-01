@@ -41,9 +41,7 @@ def __send_email(msg: str) -> None:
 
 def handler(event, context):
     return {
-        'event': str(type(event)),
-        'context': str(type(context)),
-        'dir': [dir(event), dir(context)],
+        'event': event,
         'message': 'hello world'
     }
 
